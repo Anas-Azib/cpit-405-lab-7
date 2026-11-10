@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: #f4f5f7;
+    color: #1f2933;
+}
+
+.top {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 16px 16px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0 0 8px;
+    font-size: 1.8rem;
+}
+
+.subtitle {
+    margin: 0 0 24px;
+    color: #616e7c;
+}
+
+.search input {
+    width: 100%;
+    max-width: 560px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid #cbd2d9;
+    border-radius: 8px;
+    outline: none;
+}
+
+.search input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.buttons button {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+    color: #fff;
+    background: #2563eb;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.buttons button:hover {
+    background: #1d4ed8;
+}
+
+.buttons button:disabled {
+    background: #9aa5b1;
+    cursor: not-allowed;
+}
+
+.message {
+    min-height: 1.4em;
+    margin: 16px 0 0;
+    color: #616e7c;
+}
+
+.message.error {
+    color: #c81e1e;
+}
+
+.results {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.photo {
+    margin: 0;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.photo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.photo img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.photo figcaption {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+}
+
+.photo .description {
+    margin: 0 0 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.photo .author {
+    margin: 0;
+    color: #616e7c;
+    font-size: 0.8rem;
+}
+
+.photo a {
+    color: inherit;
+}
